@@ -1,0 +1,18 @@
+newmtl FiretruckSG
+illum 2
+Ns 100
+Ka 1.00 1.00 1.00
+Kd 1.00 1.00 1.00
+Ks 0.50 0.50 0.50
+d 1.00
+map_Kd Fire_Truck/textures/FTRUCK.jpg
+norm Fire_Truck/textures/FTRUCK_N.jpg
+map_Ks Fire_Truck/textures/FTRUCK_B.jpg
+
+newmtl GlassSG
+illum 4
+Kd 0.35 0.35 0.35
+Ka 0.00 0.00 0.00
+Tf 0.50 0.50 0.50
+Ks 1.00 1.00 1.00
+d 0.50 0.50 0.50
