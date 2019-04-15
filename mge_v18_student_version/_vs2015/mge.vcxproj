@@ -22,7 +22,7 @@
     <ProjectGuid>{9BF1737F-5BBF-413D-A25B-8DA45BE5CF13}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>mge</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
     <ProjectName>mge</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -78,21 +78,29 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>debug_dynamic_exe/</OutDir>
     <IntDir>debug_dynamic_build/</IntDir>
+    <IncludePath>C:\mge\visualstudio2017_v3_2017_2018\vs_extended\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\mge\visualstudio2017_v3_2017_2018\vs_extended\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>debug_static_exe/</OutDir>
     <IntDir>debug_static_build/</IntDir>
+    <IncludePath>C:\mge\visualstudio2017_v3_2017_2018\vs_extended\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\mge\visualstudio2017_v3_2017_2018\vs_extended\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Dynamic|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>release_dynamic_exe/</OutDir>
     <IntDir>release_dynamic_build/</IntDir>
+    <IncludePath>C:\mge\visualstudio2017_v3_2017_2018\vs_extended\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\mge\visualstudio2017_v3_2017_2018\vs_extended\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>release_static_exe/</OutDir>
     <IntDir>release_static_build/</IntDir>
+    <IncludePath>C:\mge\visualstudio2017_v3_2017_2018\vs_extended\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\mge\visualstudio2017_v3_2017_2018\vs_extended\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Dynamic|Win32'">
     <ClCompile>
