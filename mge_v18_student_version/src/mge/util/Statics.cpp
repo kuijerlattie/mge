@@ -13,3 +13,4 @@ Statics::~Statics()
 
 World* WORLD = NULL;
 CubeSpawner* CUBESPAWNER = NULL;
+PhysicsWorld* PHYSICS = NULL;

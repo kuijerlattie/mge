@@ -7,6 +7,7 @@
 
 class World;
 class Renderer;
+class PhysicsWorld;
 
 /**
  * Defines the basic structure for a game, with defaults already filled in.
@@ -35,6 +36,8 @@ class AbstractGame
         virtual void _printVersionInfo();
         //initialize the extension wrangler
         virtual void _initializeGlew();
+		//create our own physics world
+		virtual void _initializePhysics();
         //create our own custom renderer instance
         virtual void _initializeRenderer();
         //initialize a scene root to which we can attach/add objects
@@ -51,6 +54,7 @@ class AbstractGame
         virtual void _processEvents();
 
 		sf::RenderWindow* _window;  //sfml window to render into
+		PhysicsWorld* _physics;		//physics goes on here
 		Renderer* _renderer;        //the renderer class to render the world
 		World* _world;              //the root game object that represents our scene
 		float _fps;                 //stores the real fps

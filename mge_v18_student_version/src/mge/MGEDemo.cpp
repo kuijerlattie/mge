@@ -56,7 +56,7 @@ void MGEDemo::_initializeScene()
 
 	srand(time(NULL));
 
-	for (int i = 0; i < 1000; i++)
+	for (int i = 0; i < 100; i++)
 	{
 		float rx = fmod(((float)rand() / (float)100), 10);
 		float ry = fmod(((float)rand() / (float)100), 10);

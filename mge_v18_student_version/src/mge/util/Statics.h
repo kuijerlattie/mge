@@ -2,6 +2,7 @@
 
 #include "mge/core/World.hpp"
 #include "mge/util/CubeSpawner.h"
+#include "mge/core/PhysicsWorld.h"
 
 class World;
 
@@ -18,5 +19,6 @@ public:
 
 	World* WORLD;
 	CubeSpawner* CUBESPAWNER;
+	PhysicsWorld* PHYSICS;
 };
 

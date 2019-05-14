@@ -4,6 +4,7 @@
 #include "mge/core/Renderer.hpp"
 #include "mge/core/World.hpp"
 #include "mge/util/Statics.h"
+#include "mge/core/PhysicsWorld.h"
 
 AbstractGame::AbstractGame():_window(NULL),_renderer(NULL),_world(NULL), _fps(0)
 {
@@ -24,6 +25,7 @@ void AbstractGame::initialize() {
     _printVersionInfo();
     _initializeGlew();
     _initializeRenderer();
+	_initializePhysics();
     _initializeWorld();
     _initializeScene();
     std::cout << std::endl << "Engine initialized." << std::endl << std::endl;
@@ -67,6 +69,15 @@ void AbstractGame::_initializeGlew() {
 	std::cout << "Initialized GLEW, status (1 == OK, 0 == FAILED):" << (glewStatus == GLEW_OK) << std::endl << std::endl;
 }
 
+void AbstractGame::_initializePhysics()
+{
+	//setup our own renderer
+	std::cout << "Initializing Physics..." << std::endl;
+	_physics = new PhysicsWorld();
+	Statics::getInstance().PHYSICS = _physics;
+	std::cout << "physics done." << std::endl << std::endl;
+}
+
 void AbstractGame::_initializeRenderer() {
     //setup our own renderer
 	std::cout << "Initializing renderer..." << std::endl;
@@ -107,7 +118,7 @@ void AbstractGame::run()
 		    while (timeSinceLastUpdate > timePerFrame) {
                 timeSinceLastUpdate -= timePerFrame;
                 _update(timePerFrame.asSeconds());
-				//physics tick
+				_physics->Tick();
 		    }
 
             _render();
