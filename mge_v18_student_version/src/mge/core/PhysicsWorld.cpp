@@ -25,7 +25,9 @@ void PhysicsWorld::Tick()
 		{
 			if (_colliders[i]->CheckCollision(_colliders[j]))
 			{
-				//has collision;
+				//call both gameobjects with oncollision
+				_colliders[i]->GetOwner()->OnCollisionEnter(_colliders[j]->GetOwner());
+				_colliders[j]->GetOwner()->OnCollisionEnter(_colliders[i]->GetOwner());
 			}
 		}
 	}

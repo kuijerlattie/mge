@@ -1,8 +1,35 @@
-﻿  MGEDemo.cpp
+﻿  main.cpp
+  AbstractBehaviour.cpp
+  CameraBehaviour.cpp
+  KeysBehaviour.cpp
+  RotatingBehaviour.cpp
+  AABBCollider.cpp
+  AbstractCollider.cpp
+  OBBCollider.cpp
+  SphereCollider.cpp
+  AbstractGame.cpp
+  Camera.cpp
+  GameObject.cpp
+  Light.cpp
+  Mesh.cpp
+  PhysicsWorld.cpp
+  Renderer.cpp
+  ShaderProgram.cpp
+  Texture.cpp
+  World.cpp
+  AbstractMaterial.cpp
+  Generating Code...
+  Compiling...
+  ColorMaterial.cpp
+  TextureMaterial.cpp
+  MGEDemo.cpp
 c:\mge\mge_v18_student_version\src\mge\mgedemo.cpp(57): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
 c:\mge\mge_v18_student_version\src\mge\mgedemo.cpp(61): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 c:\mge\mge_v18_student_version\src\mge\mgedemo.cpp(62): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 c:\mge\mge_v18_student_version\src\mge\mgedemo.cpp(63): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   CubeSpawner.cpp
+  DebugHud.cpp
+  Statics.cpp
   Generating Code...
+glew32sd.lib(glew.obj) : warning LNK4099: PDB 'glew_static.pdb' was not found with 'glew32sd.lib(glew.obj)' or at 'C:\mge\mge_v18_student_version\_vs2015\debug_static_exe\glew_static.pdb'; linking object as if no debug info
   mge.vcxproj -> C:\mge\mge_v18_student_version\_vs2015\debug_static_exe/mge.exe

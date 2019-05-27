@@ -85,8 +85,6 @@ void MGEDemo::_updateHud() {
 	_hud->draw();
 }
 
-
-
 MGEDemo::~MGEDemo()
 {
 	//dtor

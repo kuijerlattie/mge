@@ -56,6 +56,8 @@ class GameObject
 
 		virtual void update(float pStep);
 
+		virtual void OnCollisionEnter(GameObject* other);
+
         //child management, note that add/remove and setParent are closely coupled.
         //a.add(b) has the same effect as b.setParent(a)
         //Adding a gameobject or resetting the parent, recursively passes on the world pointer to all child objects

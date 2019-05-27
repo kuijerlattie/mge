@@ -208,3 +208,8 @@ GameObject* GameObject::getChildAt(int pIndex) const {
     return _children[pIndex];
 }
 
+void GameObject::OnCollisionEnter(GameObject* other)
+{
+
+}
+
