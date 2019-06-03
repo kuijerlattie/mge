@@ -1,8 +1,9 @@
 #include "OBBCollider.h"
+#include "mge/core/PhysicsWorld.h"
 
-OBBCollider::OBBCollider()
+OBBCollider::OBBCollider(bool bisStatic = false)
 {
-
+	isStatic = bisStatic;
 }
 
 OBBCollider::~OBBCollider()
@@ -17,12 +18,12 @@ bool OBBCollider::CheckCollision(AbstractCollider* other)
 
 bool OBBCollider::CheckCollision(AABBCollider* other)
 {
-	return false;
+	return PhysicsWorld::AABBonOBB(other, this);
 }
 
 bool OBBCollider::CheckCollision(OBBCollider* other)
 {
-	return false;
+	return PhysicsWorld::OBBonOBB(this, other);
 }
 
 bool OBBCollider::CheckCollision(SphereCollider* other)

@@ -111,14 +111,14 @@ void AbstractGame::run()
 	while (_window->isOpen()) {
 		timeSinceLastUpdate += updateClock.restart();
 
-		if (timeSinceLastUpdate > timePerFrame)
-		{
+		//if (timeSinceLastUpdate > timePerFrame)
+		//{
             glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
 
+			_update(timePerFrame.asSeconds());
+			_physics->Tick(); //--move in the while to make sure its updating less
 		    while (timeSinceLastUpdate > timePerFrame) {
                 timeSinceLastUpdate -= timePerFrame;
-                _update(timePerFrame.asSeconds());
-				_physics->Tick();
 		    }
 
             _render();
@@ -133,7 +133,7 @@ void AbstractGame::run()
                 frameCount = 0;
             }
 
-		}
+		//}
 
 		//empty the event queue
 		_processEvents();

@@ -12,11 +12,11 @@ public:
 
 	void RegisterCollider(AbstractCollider* pCollider);
 	void Tick();
+	static bool AABBonAABB(AABBCollider* colliderA, AABBCollider* colliderB);
+	static bool AABBonOBB(AABBCollider* colliderA, OBBCollider* colliderB);
+	static bool OBBonOBB(OBBCollider* colliderA, OBBCollider* colliderB);
 private:
 	std::vector<AbstractCollider*> _colliders;
-	bool AABBonAABB(AABBCollider* colliderA, AABBCollider* colliderB);
-	bool AABBonOBB(AABBCollider* colliderA, OBBCollider* colliderB);
-	bool OBBonOBB(OBBCollider* colliderA, OBBCollider* colliderB);
 
 };
 

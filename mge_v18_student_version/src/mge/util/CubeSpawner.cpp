@@ -16,7 +16,7 @@ CubeSpawner::~CubeSpawner()
 {
 }
 
-void CubeSpawner::SpawnCube(glm::vec3 position, bool isStatic)
+void CubeSpawner::SpawnCube(glm::vec3 position, bool bisStatic)
 {
 	if (cubeMesh == NULL)
 	{
@@ -27,7 +27,7 @@ void CubeSpawner::SpawnCube(glm::vec3 position, bool isStatic)
 	cube->scale(glm::vec3(0.1f, 0.1f, 0.1f));
 	cube->setMesh(cubeMesh);
 	cube->setMaterial(blueColorMat);
-	cube->SetCollider(new OBBCollider());
+	cube->SetCollider(new OBBCollider(bisStatic));
 	Statics::getInstance().PHYSICS->RegisterCollider(cube->getCollider());
 	Statics::getInstance().WORLD->add(cube);
 }

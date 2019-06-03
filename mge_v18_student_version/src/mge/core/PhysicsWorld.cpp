@@ -55,7 +55,7 @@ bool PhysicsWorld::OBBonOBB(OBBCollider* colliderA, OBBCollider* colliderB)
 
 	for (int a = 0; a < 3; a++) {
 		glm::vec3 l = glm::vec3(ATransform[a]); // one axis to project on
-		float tl = std::abs(glm::dot(l, BCenter) - glm::dot(l, ACenter)); // center distance
+		float tl = std::abs(glm::dot(l, BCenter) - glm::dot(l, ACenter)); // center distance	
 		float ra = std::abs(glm::dot(l, glm::vec3(ATransform[0]))) + std::abs(glm::dot(l, glm::vec3(ATransform[1]))) + std::abs(glm::dot(l, glm::vec3(ATransform[2])));
 		float rb = std::abs(glm::dot(l, glm::vec3(BTransform[0]))) + std::abs(glm::dot(l, glm::vec3(BTransform[1]))) + std::abs(glm::dot(l, glm::vec3(BTransform[2])));
 		float penetration = (ra + rb) - tl;

@@ -1,1 +1,8 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Platforms\Win32\PlatformToolsets\v141\Toolset.targets(34,5): error MSB8036: The Windows SDK version 10.0.17763.0 was not found. Install the required version of Windows SDK or change the SDK version in the project property pages or by right-clicking the solution and selecting "Retarget solution".
+﻿  AbstractGame.cpp
+  Generating code
+  1 of 1035 functions (<0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+glew32s.lib(glew.obj) : warning LNK4099: PDB 'glew_static.pdb' was not found with 'glew32s.lib(glew.obj)' or at 'C:\mge\mge_v18_student_version\_vs2015\release_static_exe\glew_static.pdb'; linking object as if no debug info
+  mge.vcxproj -> C:\mge\mge_v18_student_version\_vs2015\release_static_exe/mge.exe

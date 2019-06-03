@@ -4,7 +4,7 @@ class OBBCollider :
 	public AbstractCollider
 {
 public:
-	OBBCollider();
+	OBBCollider(bool isStatic);
 	~OBBCollider();
 	bool CheckCollision(AbstractCollider* other) override;
 	bool CheckCollision(AABBCollider* other) override;

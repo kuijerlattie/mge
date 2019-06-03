@@ -16,6 +16,7 @@ public:
 
 	virtual void SetOwner(GameObject* pGameObject);
 	virtual GameObject* GetOwner();
+	bool isStatic = false;
 
 	virtual bool CheckCollision(AbstractCollider* other);
 	virtual bool CheckCollision(AABBCollider* other);

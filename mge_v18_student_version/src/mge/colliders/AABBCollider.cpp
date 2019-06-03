@@ -1,5 +1,5 @@
 #include "AABBCollider.h"
-
+#include "mge/core/PhysicsWorld.h"
 
 
 AABBCollider::AABBCollider()
@@ -18,12 +18,12 @@ bool AABBCollider::CheckCollision(AbstractCollider* other)
 
 bool AABBCollider::CheckCollision(AABBCollider* other)
 {
-	return false;
+	return PhysicsWorld::AABBonAABB(this, other);
 }
 
 bool AABBCollider::CheckCollision(OBBCollider* other)
 {
-	return false;
+	return PhysicsWorld::AABBonOBB(this, other);
 }
 
 bool AABBCollider::CheckCollision(SphereCollider* other)
